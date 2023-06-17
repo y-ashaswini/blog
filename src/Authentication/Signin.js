@@ -48,6 +48,7 @@ export default function Signin() {
     <>
       {!user || !user.email || (user.email && user.email.trim()) === "" ? (
         <>
+          <span className="md:text-5xl text-2xl text-zinc-200">Sign in</span>
           <form className="flex flex-col space-y-8 w-3/4 sm:my-16 my-8 text-zinc-500">
             <input
               type="text"
