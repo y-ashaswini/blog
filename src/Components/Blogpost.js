@@ -1,5 +1,6 @@
 import { createClient } from "@supabase/supabase-js";
 import { useEffect, useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { userDataContext } from "../App";
 import moment from "moment/moment";
 import Comment from "./Comment";
@@ -11,6 +12,7 @@ const supabase = createClient(
 );
 
 export default function Blogpost() {
+  let navigate = useNavigate();
   const { user } = useContext(userDataContext);
 
   const [blogdata, setBlogdata] = useState("");
@@ -23,6 +25,17 @@ export default function Blogpost() {
 
   const [commentsData, setCommentsData] = useState("");
   const { insertNode, deleteNode } = useNode();
+
+  async function DEL_BLOG() {
+    const { data, error } = await supabase
+      .from("post")
+      .delete()
+      .eq("id", blogdata.id)
+      .select();
+    if (error) console.log("deleting error: ", error);
+    else console.log("deleted: ", data);
+    navigate("/");
+  }
 
   async function GET_BLOG(heading) {
     // console.log("heading: ", heading);
@@ -41,15 +54,15 @@ export default function Blogpost() {
       data[0].main_content &&
         set_main_content(JSON.parse(data[0].main_content));
       set_end_content(data[0].end_content);
-      let f = JSON.parse(data[0].likes);
-      setParsed_likes_list(f);
       setCommentsData(JSON.parse(data[0].comments));
+      const f = JSON.parse(data[0].likes);
       for (let i = 0; i < f.length; i++) {
-        if (parsed_likes_list[i] == user.id) {
+        if (f[i] == user.id && f[i] != undefined && f[i] != null) {
           setLiked_by_curr_user(true);
           break;
         }
       }
+      setParsed_likes_list(f);
     }
   }
 
@@ -77,7 +90,7 @@ export default function Blogpost() {
       setParsed_likes_list(temp);
       const { data, error } = await supabase
         .from("post")
-        .update({ likes_list: JSON.stringify(parsed_likes_list) })
+        .update({ likes: JSON.stringify(parsed_likes_list) })
         .eq("id", blogdata.id);
       if (error) console.log("disliking error: ", error);
     }
@@ -114,6 +127,14 @@ export default function Blogpost() {
 
   return (
     <div className="flex flex-col gap-4 mb-12 mt-4">
+      {user.email === process.env.REACT_APP_MAIL && (
+        <span
+          className="absolute  border-[1px] bottom-2 right-2 text-zinc-900 border-zinc-500 bg-zinc-500 hover:bg-zinc-200 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm semibold cursor-pointer text-sm"
+          onClick={() => DEL_BLOG()}
+        >
+          DELETE
+        </span>
+      )}
       <span className="absolute right-7 top-16 verybold flex flex-col text-center gap-1 z-30 text-red-600">
         {parsed_likes_list.length}
         {liked_by_curr_user ? (

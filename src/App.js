@@ -11,6 +11,7 @@ import Contactme from "./Components/Contactme";
 import Mywork from "./Components/Mywork";
 import Signin from "./Authentication/Signin";
 import Signup from "./Authentication/Signup";
+import Write from "./Components/Write";
 
 export const userDataContext = createContext();
 
@@ -68,7 +69,7 @@ export default function App() {
           <span>DEVELOPER</span>
         </div>
 
-        <div className="flex sm:text-sm text-xs gap-4 absolute sm:right-9 right-6 sm:top-56 top-48 rotate-90 origin-right verybold text-zinc-400">
+        <div className="flex sm:text-sm text-xs gap-4 absolute sm:right-9 right-6 sm:top-64 top-48 rotate-90 origin-right verybold text-zinc-400">
           <Link
             to="/my_work"
             className="hover:text-zinc-900 tracking-wider cursor-pointer duration-300"
@@ -118,21 +119,33 @@ export default function App() {
           </span>
           <div className="grid grid-cols-8 w-full h-full p-2">
             <div className="md:col-span-2 col-span-8 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin overflow-x-visible flex flex-col  text-zinc-500 text-4xl">
-              {postsdata
-                ? postsdata.map((each) => (
-                    <Link
-                      to={`blog/${each.heading.split(" ").join("_")}`}
-                      key={each.id}
-                    >
-                      <span className="hover:text-zinc-200 cursor-pointer duration-200 ease-in">
-                        {each.heading.toUpperCase()}
-                      </span>
-                      <span className="ml-2 text-xs text-zinc-200 semibold w-fit">
-                        {moment(each.created_at).format("Do MMMM, YYYY")}
-                      </span>
-                    </Link>
-                  ))
-                : "Loading..."}
+              {postsdata ? (
+                postsdata.map((each) => (
+                  <Link
+                    to={`blog/${each.heading.split(" ").join("_")}`}
+                    key={each.id}
+                  >
+                    <span className="hover:text-zinc-200 cursor-pointer duration-200 ease-in">
+                      {each.heading.toUpperCase()}
+                    </span>
+                    <span className="ml-2 text-xs text-zinc-200 semibold w-fit">
+                      {moment(each.created_at).format("Do MMMM, YYYY")}
+                    </span>
+                  </Link>
+                ))
+              ) : (
+                <span>Loading...</span>
+              )}
+              {user.email === process.env.REACT_APP_MAIL ? (
+                <Link
+                  to="/write"
+                  className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
+                >
+                  WRITE
+                </Link>
+              ) : (
+                <></>
+              )}
             </div>
             <div className="md:col-span-6 md:col-start-3 col-start-1 col-span-8 md:px-12 sm:px-8 px-2 text-zinc-200 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin ">
               <Routes location={location} key={location.pathname}>
@@ -142,6 +155,7 @@ export default function App() {
                 <Route path="/my_work" exact element={<Mywork />} />
                 <Route path="/sign_in" exact element={<Signin />} />
                 <Route path="/sign_up" exact element={<Signup />} />
+                <Route path="/write" exact element={<Write />} />
               </Routes>
             </div>
           </div>

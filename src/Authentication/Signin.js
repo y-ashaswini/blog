@@ -83,12 +83,12 @@ export default function Signin() {
         </>
       ) : (
         <>
-          <div className="md:text-3xl my-2 text-lg font-bold text-zinc-200">
+          <div className="md:text-5xl my-4 text-2xl text-zinc-200">
             You're already Signed in.
           </div>
           <Link
             to="/"
-            className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
+            className="border-[1px] border-zinc-500 text-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             HOME PAGE
           </Link>

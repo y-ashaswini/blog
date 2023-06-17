@@ -1,0 +1,12 @@
+PENDING
+
+1) api to connect to github? just list them in points bruh
+2) add all nice projects
+3) explain maybe?
+4) some "tags" system to look through work with tags
+5) academic achievements even?
+6) blog writing - think of something. user needs to click on (+) and add another type of paragraph, figrue that out
+
+
+DONE
+7) host on vercel
