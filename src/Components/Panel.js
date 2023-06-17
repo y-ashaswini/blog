@@ -98,7 +98,7 @@ export default function Panel() {
           </a>
         ))}
       {window.location.pathname.split("/")[1] === "contact_me" && (
-        <span className="flex md:flex-col justify-around h-full mx-auto text-2xl">
+        <span className="flex md:flex-col justify-around items-center gap-4 h-full mx-auto md:text-2xl text-lg">
           <a
             href="https://github.com/y-ashaswini"
             target="_blank"

@@ -62,7 +62,7 @@ export default function Signup() {
               type="password"
               placeholder="Confirm Password"
               className="border-b-[1px] outline-none bg-transparent border-zinc-500 text-zinc-200"
-              value={password}
+              value={confirmpass}
               onChange={(e) => setConfirmpass(e.target.value)}
             />
             <button

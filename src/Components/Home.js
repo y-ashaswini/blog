@@ -4,7 +4,7 @@ export default function Home() {
       <span className="text-3xl tracking-wider leading-none text-zinc-400 my-2 md:flex md:flex-col md:gap-8">
         WELCOME TO{" "}
         <span className="lg:text-[14vh] sm:text-[8vh] text-zinc-200">
-          DYNAMIC EQUILLIBRIUM
+          DYNAMIC EQUILLIBRIUM{" "}
         </span>
         GREETINGS, FROM MY CORNER OF THE INTERNET!
       </span>

@@ -113,7 +113,7 @@ export default function App() {
             <div className="md:col-span-2 col-span-8 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin overflow-x-visible flex flex-col  text-zinc-500 text-4xl">
               <Panel />
             </div>
-            <div className="md:col-span-6 md:col-start-3 col-start-1 col-span-8 md:px-8 px-4 text-zinc-200 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin">
+            <div className="md:col-span-6 md:col-start-3 col-start-1 col-span-8 md:px-8 px-4 py-4 text-zinc-200 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin">
               <Routes location={location} key={location.pathname}>
                 <Route path="/" exact element={<Home />} />
                 <Route path="/blog" exact element={<Blogintro />} />
