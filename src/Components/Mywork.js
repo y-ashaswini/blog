@@ -16,6 +16,7 @@ export default function Mywork() {
       <span className="sm:text-6xl text-zinc-500 hover:text-zinc-200 duration-200 ease-in">
         BEGIN EXPLORING ANY PROJECT ON THE PANE TO THE LEFT (OR ABOVE).
       </span>
+
     </div>
   );
 }

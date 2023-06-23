@@ -120,6 +120,20 @@ export default function Panel() {
           >
             MEDIUM
           </a>
+          <a
+            href="https://tinyurl.com/yashaswini-shivathaya"
+            target="_blank"
+            className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
+          >
+            RESUME
+          </a>
+          <a
+            href="https://tinyurl.com/yashaswini-design"
+            target="_blank"
+            className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
+          >
+            DESIGN
+          </a>
         </span>
       )}
 
