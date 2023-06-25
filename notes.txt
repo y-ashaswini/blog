@@ -1,13 +1,15 @@
 PENDING
-
-0) pop ups instead of console log
+-2) put it (and your pomodoro app) into your paper resume urgentlyyyyy
+-1) make it a pwa
+0) change title, heading, add icon (manifest)
+1) pop ups instead of console log
 2) add all nice projects
 3) explain maybe?
 4) some "tags" system to look through work with tags
 5) academic achievements even?
 
 DONE
--1) add social media links to the left pane
+0) add social media links to the left pane
 7) host on vercel
 1) api to connect to github? just list them in points bruh
 6) blog writing - think of something. user needs to click on (+) and add another type of paragraph, figrue that out
