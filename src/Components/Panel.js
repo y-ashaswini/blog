@@ -76,7 +76,7 @@ export default function Panel({showPopup}) {
             .map((item, index) => (
               <span
                 key={index}
-                className="md:text-2xl md:block hidden break-words text-zinc-600 hover:text-zinc-200 duration-500 hover:ease-in-out"
+                    className="md:text-3xl md:block hidden break-words text-zinc-600 hover:text-[#8E7D38] duration-500 hover:ease-in-out -mb-2 mr-1"
               >
                 {item}
               </span>

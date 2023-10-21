@@ -124,7 +124,7 @@ export default function App() {
                         {user && user.email && user.email}
                     </span>
                     <div className="grid grid-cols-8 w-full h-full p-2">
-                        <div className="md:col-span-2 col-span-8 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin overflow-x-visible flex flex-col  text-zinc-500 text-4xl">
+                        <div className="md:col-span-2 col-span-8 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin overflow-x-visible flex flex-col  text-zinc-500 text-4xl border-r-[1px] border-[#8E7D38] border-opacity-40">
                             <Panel showPopup={showPopup} />
                         </div>
                         <div className="md:col-span-6 md:col-start-3 col-start-1 col-span-8 md:px-8 px-4 py-4 text-zinc-200 overflow-y-scroll scrollbar-thumb-zinc-900 scrollbar-thumb-rounded-2xl scrollbar-track-zinc-900 scrollbar-thin">
