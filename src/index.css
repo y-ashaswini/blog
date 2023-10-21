@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;600;800&display=swap');
 
 * {
-font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 .verybold {
@@ -18,4 +18,19 @@ font-family: 'Red Hat Display', sans-serif;
 
 .notbold {
     font-weight: 300;
+}
+
+::-moz-selection {
+    background: #FFBF00;
+    color: #18181B;
+}
+
+::-webkit-selection {
+    background: #FFBF00;
+    color: #18181B;
+}
+
+::selection {
+    background: #FFBF00;
+    color: #18181B;
 }

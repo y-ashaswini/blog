@@ -8,7 +8,7 @@ const supabase = createClient(
   process.env.REACT_APP_SUPABASE_URL,
   process.env.REACT_APP_SUPABASE_API_ANON_KEY
 );
-export default function Panel() {
+export default function Panel({showPopup}) {
   const { user } = useContext(userDataContext);
   const [postsdata, setPostsdata] = useState("");
   const [projsdata, setProjsdata] = useState("");
@@ -17,7 +17,8 @@ export default function Panel() {
     let { data, error } = await supabase.from("post").select("*");
 
     if (error) {
-      console.log("error: ", error);
+      console.log(error);
+        showPopup("Error Fetching Posts!")
     } else {
       // console.log("data: ", data);
       setPostsdata(data);
