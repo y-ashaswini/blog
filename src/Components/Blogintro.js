@@ -8,7 +8,7 @@ export default function Blogposts() {
                 </span>
             </span>
             <span className="text-xl tracking-wider">
-                Hi, this is my blog. Here I rant, and you read. Hope you enjoy it :)
+                Hi, this is my blog. Here I rant, and you read. Enjoy :)
             </span>
             <span className="sm:text-6xl text-zinc-500 hover:text-zinc-200 duration-200 ease-in">
                 BEGIN EXPLORING BY CLICKING ANY LINK ON THE PANEL.

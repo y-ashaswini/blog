@@ -87,6 +87,7 @@ export default function Panel({showPopup}) {
         projsdata.map((item, index) => (
           <a
             target="_blank"
+            rel="noreferrer"
             href={`https://github.com/${item.full_name}`}
             key={index}
           >
@@ -103,6 +104,7 @@ export default function Panel({showPopup}) {
           <a
             href="https://github.com/y-ashaswini"
             target="_blank"
+            rel="noreferrer"
             className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             GITHUB
@@ -110,6 +112,7 @@ export default function Panel({showPopup}) {
           <a
             href="https://www.linkedin.com/in/yashaswini-shivathaya"
             target="_blank"
+            rel="noreferrer"
             className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             LINKEDIN
@@ -117,6 +120,7 @@ export default function Panel({showPopup}) {
           <a
             href="https://medium.com/@evilgeniusprevails"
             target="_blank"
+            rel="noreferrer"
             className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             MEDIUM
@@ -124,6 +128,7 @@ export default function Panel({showPopup}) {
           <a
             href="https://tinyurl.com/yashaswini-shivathaya"
             target="_blank"
+            rel="noreferrer"
             className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             RESUME
@@ -131,6 +136,7 @@ export default function Panel({showPopup}) {
           <a
             href="https://tinyurl.com/yashaswini-design"
             target="_blank"
+            rel="noreferrer"
             className="border-[1px] border-zinc-500 hover:border-zinc-200 duration-200 ease-in w-fit px-2 py-1 rounded-sm hover:text-zinc-200"
           >
             DESIGN
